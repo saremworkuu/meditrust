@@ -1,0 +1,8 @@
+{
+  "name": "@meditrust/verify",
+  "version": "1.0.0",
+  "description": "Shared medicine verification library for MediTrust PWA, Telegram Bot, and SMS services",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "private": true
+}

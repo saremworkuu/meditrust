@@ -1,0 +1,79 @@
+{
+  "app": {
+    "title": "MediTrust",
+    "subtitle": "Ethiopia National Medicine Patient-Safety Platform",
+    "tagline": "Protecting patients across Ethiopia through cryptographic medicine verification and real-time recall reach."
+  },
+  "nav": {
+    "verify": "Verify Medicine",
+    "recalls": "Active Recalls",
+    "pharmacies": "Trusted Pharmacies",
+    "earlyWarning": "Safety Map",
+    "regulator": "EFDA Console"
+  },
+  "verify": {
+    "heading": "Verify Medicine Pack",
+    "instruction": "Scan the QR code printed on your medicine pack, or type the code below.",
+    "scanQr": "Scan QR Code",
+    "pasteCode": "Paste / Type Code",
+    "uploadImage": "Upload Photo",
+    "quickSamples": "Quick Demo Test Packs",
+    "sampleGenuine": "🟢 Genuine Amoxicillin",
+    "sampleSold": "🔵 Already Sold Pack",
+    "sampleRecalled": "🔴 Recalled Batch",
+    "sampleExpired": "🟠 Expired Coartem",
+    "sampleClone": "🛑 Suspected Clone Attack",
+    "sampleUnknown": "⚠️ Counterfeit / Unknown",
+    "verifyButton": "Verify On Chain",
+    "verifying": "Querying Chain RPC...",
+    "batchDetails": "Batch Information",
+    "gtin": "GTIN",
+    "batchNumber": "Batch Number",
+    "serialNumber": "Serial Number",
+    "expiryDate": "Expiration Date",
+    "chainVerification": "Cryptographic Chain Proof",
+    "verifiedOnChain": "Verified directly via Ethereum L2 RPC",
+    "nationalRegistryBadge": "EFDA National Registry",
+    "registeredNational": "Also registered in National Medicine Registry",
+    "registryUnavailable": "National Registry offline — fallback verified on-chain",
+    "alertMeButton": "🔔 Alert me if this medicine is recalled",
+    "reportButton": "🚩 Report Anomaly / Counterfeit",
+    "voiceButton": "🔊 Listen in Amharic (ድምጽ)",
+    "inputPlaceholder": "e.g. https://meditrust.et/v?b=1&s=SN98234 or MT:1:SN98234:CODE or 1.SN98234.CODE"
+  },
+  "status": {
+    "genuine": "Genuine & Safe",
+    "sold": "Already Dispensed",
+    "recalled": "Recalled Batch",
+    "expired": "Expired Medicine",
+    "clone_suspected": "Clone Attack Detected",
+    "unknown": "Unknown / Unverified"
+  },
+  "recallModal": {
+    "title": "Recall Alert Registration",
+    "description": "Receive an immediate notification if health regulators issue a safety recall for this medicine batch.",
+    "privacyNote": "Privacy guarantee: Your contact is stored encrypted at rest, linked only to the batch (never to your pack serial or scan location), and deleted immediately upon unsubscribe (FR-RR-03, NFR-25).",
+    "selectChannel": "Choose notification channel:",
+    "channelTelegram": "Telegram (@handle or Chat ID)",
+    "channelSms": "SMS / Phone (+251...)",
+    "channelEmail": "Email Address",
+    "contactPlaceholder": "Enter your Telegram handle or phone number",
+    "consentCheckbox": "I give explicit consent to be notified solely in the event of an official recall for batch",
+    "subscribeButton": "Register Safety Alert",
+    "successMessage": "Alert active! You will be warned immediately if this batch is recalled.",
+    "simulatedNotice": "[Simulated Notification Gateway]"
+  },
+  "bot": {
+    "welcome": "🇪🇹 Welcome to MediTrust Ethiopia Medicine Verification!\n\nSend a clear photo of your medicine pack's QR code, or paste/type the code text below (e.g. MT:1:ET-AMOX-001:SEC4491).",
+    "chooseLanguage": "Please select your preferred language / ቋንቋ ይምረጡ:",
+    "langSetEn": "Language set to English 🇬🇧. Send a photo or code anytime.",
+    "langSetAm": "ቋንቋ ወደ አማርኛ 🇪🇹 ተቀይሯል። የQR ኮድ ፎቶ ወይም ጽሑፍ ይላኩ።",
+    "decodeFailed": "⚠️ Could not read QR code from the image.\n\nPlease retake the photo with better lighting and focus, or type the printed code directly (e.g., MT:1:ET-AMOX-001:SEC4491).",
+    "btnReport": "🚩 Report a problem",
+    "btnAlert": "🔔 Alert me about recalls",
+    "btnPharmacy": "🏥 Find a verified pharmacy",
+    "reportResponse": "🚩 Anomaly logged. If you suspect a counterfeit pack, retain the packaging and contact the EFDA hotline at 848 or visit your nearest health facility.",
+    "alertResponse": "🔔 Recall Alert Active: You will be immediately notified in this chat if batch #{batchId} is recalled.",
+    "pharmacyResponse": "🏥 Verified Pharmacies (Addis Ababa):\n• Bole Med-Plus Pharmacy (Gold ⭐)\n• Arada Community Pharmacy (Silver)\n• Kazanchis Central Care (Gold ⭐)"
+  }
+}

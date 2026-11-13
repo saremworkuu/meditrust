@@ -1,0 +1,79 @@
+{
+  "app": {
+    "title": "ሜዲትረስት",
+    "subtitle": "የኢትዮጵያ ብሔራዊ የመድኃኒት ደህንነት እና ማረጋገጫ ሥርዓት",
+    "tagline": "በሳይንሳዊ እና ሰንሰለታዊ የመረጃ ማረጋገጫ የታገዘ የህመምተኞች ደህንነት መጠበቂያ።"
+  },
+  "nav": {
+    "verify": "መድኃኒት አረጋግጥ",
+    "recalls": "የታገዱ መድኃኒቶች",
+    "pharmacies": "የታመኑ ፋርማሲዎች",
+    "earlyWarning": "የአደጋ ካርታ",
+    "regulator": "የኢ.መ.ም.ባ ኮንሶል"
+  },
+  "verify": {
+    "heading": "የመድኃኒት ጥቅል ማረጋገጫ",
+    "instruction": "በመድኃኒት ማሸጊያው ላይ የሚገኘውን የQR ኮድ ይቃኙ ወይም ከታች ያለውን ኮድ ያስገቡ።",
+    "scanQr": "QR ኮድ ቃኝ",
+    "pasteCode": "ኮድ አስገባ",
+    "uploadImage": "ፎቶ ጫን",
+    "quickSamples": "የሙከራ ጥቅሎች (ናሙና)",
+    "sampleGenuine": "🟢 ትክክለኛ አሞክሲሲሊን",
+    "sampleSold": "🔵 ቀደም ሲል የተሸጠ",
+    "sampleRecalled": "🔴 የታገደ ባች",
+    "sampleExpired": "🟠 ጊዜው ያለፈበት ኳርተም",
+    "sampleClone": "🛑 አጠራጣሪ የተባዛ ኮድ",
+    "sampleUnknown": "⚠️ ያልታወቀ / ሀሰተኛ",
+    "verifyButton": "በብሎክቼይን አረጋግጥ",
+    "verifying": "ከመረቡ በማረጋገጥ ላይ...",
+    "batchDetails": "የባች ዝርዝር መረጃ",
+    "gtin": "ዓለም አቀፍ መለያ (GTIN)",
+    "batchNumber": "የባች ቁጥር",
+    "serialNumber": "ልዩ መለያ ቁጥር",
+    "expiryDate": "የሚያበቃበት ቀን",
+    "chainVerification": "የብሎክቼይን ማረጋገጫ",
+    "verifiedOnChain": "በቀጥታ ከብሎክቼይን ኔትወርክ የተረጋገጠ",
+    "nationalRegistryBadge": "የኢ.መ.ም.ባ ብሔራዊ መዝገብ",
+    "registeredNational": "በብሔራዊ የመድኃኒት መዝገብ ውስጥ የተመዘገበ",
+    "registryUnavailable": "ብሔራዊ መዝገቡ ለጊዜው ቢቋረጥም በብሎክቼይን ተረጋግጧል",
+    "alertMeButton": "🔔 ይህ መድኃኒት ከታገደ አሳውቀኝ",
+    "reportButton": "🚩 አጠራጣሪ መድኃኒት ጠቁም",
+    "voiceButton": "🔊 በድምጽ አዳምጥ",
+    "inputPlaceholder": "ለምሳሌ፦ MT:1:SN98234:CODE ወይም 1.SN98234.CODE"
+  },
+  "status": {
+    "genuine": "ትክክለኛ እና ደህንነቱ የተጠበቀ",
+    "sold": "ቀደም ሲል የተሸጠ / የተሰጠ",
+    "recalled": "የታገደ ባች",
+    "expired": "ጊዜው ያለፈበት መድኃኒት",
+    "clone_suspected": "የተባዛ አጠራጣሪ ኮድ",
+    "unknown": "ያልታወቀ / ያልተረጋገጠ"
+  },
+  "recallModal": {
+    "title": "የእገዳ ማሳወቂያ ምዝገባ",
+    "description": "ይህ የመድኃኒት ባች በጤና ባለስልጣናት እገዳ ከተጣለበት አስቸኳይ መልእክት ይደርስዎታል።",
+    "privacyNote": "የግል ሚስጥር ጥበቃ ዋስትና፡ አድራሻዎ በምስጢር የተጠበቀ ሆኖ ከባች ቁጥር ጋር ብቻ ይያያዛል፤ ከጥቅሉ ልዩ መለያ ወይም መገኛ ቦታ ጋር ፈጽሞ አይያያዝም (FR-RR-03)።",
+    "selectChannel": "የማሳወቂያ መንገድ ይምረጡ፡",
+    "channelTelegram": "ቴሌግራም (@handle ወይም Chat ID)",
+    "channelSms": "ኤስኤምኤስ / ስልክ (+251...)",
+    "channelEmail": "ኢሜይል አድራሻ",
+    "contactPlaceholder": "የቴሌግራም ስምዎን ወይም ስልክ ቁጥርዎን ያስገቡ",
+    "consentCheckbox": "ይህ ባች እገዳ ከተጣለበት ብቻ ማሳወቂያ እንዲደርሰኝ ፈቅጃለሁ",
+    "subscribeButton": "ማሳወቂያውን መዝግብ",
+    "successMessage": "ማሳወቂያው በርቷል! ይህ ባች እገዳ ከተጣለበት ፈጣን መልእክት ይደርስዎታል።",
+    "simulatedNotice": "[የተመሰለ የማሳወቂያ መግቢያ]"
+  },
+  "bot": {
+    "welcome": "🇪🇹 እንኳን ወደ ሜዲትረስት ኢትዮጵያ የመድኃኒት ማረጋገጫ በደህና መጡ!\n\nበመድኃኒት ማሸጊያው ላይ ያለውን የQR ኮድ ፎቶ ያንሱ እና ይላኩ፣ ወይም ኮዱን ከታች ይጻፉ (ለምሳሌ፦ MT:1:ET-AMOX-001:SEC4491)።",
+    "chooseLanguage": "እባክዎ ቋንቋ ይምረጡ / Please select your language:",
+    "langSetEn": "ቋንቋ ወደ እንግሊዝኛ 🇬🇧 ተቀይሯል። Language set to English.",
+    "langSetAm": "ቋንቋ ወደ አማርኛ 🇪🇹 ተቀይሯል። የQR ኮድ ፎቶ ወይም ጽሑፍ በማንኛውም ጊዜ መላክ ይችላሉ።",
+    "decodeFailed": "⚠️ የQR ኮዱን ከምስሉ ማንበብ አልተቻለም።\n\nእባክዎ የተሻለ ብርሃን ባለበት ቦታ ፎቶውን በድጋሚ ያንሱ፣ ወይም በማሸጊያው ላይ የተጻፈውን ኮድ በቀጥታ ይጻፉ (ለምሳሌ፦ MT:1:ET-AMOX-001:SEC4491)።",
+    "btnReport": "🚩 ችግር ሪፖርት አድርግ",
+    "btnAlert": "🔔 የእገዳ ማሳወቂያ መዝግብ",
+    "btnPharmacy": "🏥 የታመነ ፋርማሲ ፈልግ",
+    "reportResponse": "🚩 ጥቆማዎ ተመዝግቧል። አጠራጣሪ ወይም ሀሰተኛ መድኃኒት ካጋጠመዎት ማሸጊያውን ሳይጥሉ በነጻ የስልክ መስመር 848 ለኢ.መ.ም.ባ ያሳውቁ ወይም በአቅራቢያዎ ወደሚገኝ የጤና ተቋም ይሂዱ።",
+    "alertResponse": "🔔 የእገዳ ማሳወቂያ በርቷል፡ ባች #{batchId} እገዳ ከተጣለበት በዚህ የቴሌግራም መልእክት ወዲያውኑ ይደርስዎታል።",
+    "pharmacyResponse": "🏥 የታመኑ ፋርማሲዎች (አዲስ አበባ)፡\n• ቦሌ ሜድ-ፕላስ ፋርማሲ (የወርቅ ደረጃ ⭐)\n• አራዳ ማህበረሰብ ፋርማሲ (የብር ደረጃ)\n• ካዛንቺስ ሴንትራል ኬር (የወርቅ ደረጃ ⭐)"
+  }
+}

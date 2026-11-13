@@ -1,0 +1,6 @@
+{
+  "network": "hardhat",
+  "chainId": "31337",
+  "mediTrust": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "deployedAt": "2026-11-11T14:53:14.420Z"
+}

@@ -1,0 +1,6 @@
+{
+  "name": "MediTrust",
+  "description": "Patient-safety platform for medicines in Ethiopia with track-and-trace, clone detection, recall reach, and pharmacy trust scoring.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
