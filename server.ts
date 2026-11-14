@@ -4,9 +4,15 @@
  * Runs Express API endpoints and mounts Vite dev middleware on port 3000.
  */
 
+import dotenv from 'dotenv';
+dotenv.config();
+dotenv.config({ path: '.env.local', override: true });
+
 import express, { Request, Response } from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { validateEnv } from './lib/env.ts';
+import { testPinataConnection } from './lib/ipfs.ts';
 import { recallComplianceService } from './src/services/recallComplianceService.ts';
 import {
   telegramWebhookHandler,
@@ -31,6 +37,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 async function startServer() {
+  // Task 1: Environment startup validation using Zod
+  validateEnv(true);
+
   const app = express();
   const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
@@ -633,6 +642,68 @@ async function startServer() {
       });
     } catch (err: any) {
       res.status(500).json({ success: false, error: err.message });
+    }
+  });
+
+  // 32. Pinata IPFS Health Check Endpoint (Task 7)
+  app.get('/api/health/pinata', async (_req: Request, res: Response) => {
+    try {
+      const result = await testPinataConnection();
+      res.status(result.status).json(result);
+    } catch (err: any) {
+      res.status(500).json({ success: false, status: 500, message: err.message });
+    }
+  });
+
+  // 33. IPFS Evidence Upload Endpoint (Task 5)
+  // Max 10MB, Images & PDFs only. PINATA_JWT never exposed to client.
+  app.post('/api/upload', express.raw({ type: '*/*', limit: '10mb' }), async (req: Request, res: Response) => {
+    try {
+      const pinataJwt = process.env.PINATA_JWT;
+      if (!pinataJwt || pinataJwt.includes('your_pinata_jwt')) {
+        res.status(500).json({ error: 'Server configuration error: PINATA_JWT is not configured.' });
+        return;
+      }
+
+      const contentType = (req.headers['content-type'] || '').toLowerCase();
+      const isAllowed =
+        contentType.startsWith('image/') ||
+        contentType.includes('pdf') ||
+        contentType.includes('multipart/form-data');
+
+      if (!isAllowed) {
+        res.status(400).json({
+          error: `Invalid content type '${contentType}'. Only images and PDF files are allowed.`,
+        });
+        return;
+      }
+
+      const pinataFormData = new FormData();
+      const bodyBuffer = req.body instanceof Buffer ? req.body : Buffer.from(req.body || '');
+      const blob = new Blob([bodyBuffer], { type: contentType });
+      pinataFormData.append('file', blob, `meditrust_${Date.now()}`);
+
+      const pinataRes = await fetch('https://api.pinata.cloud/pinning/pinFileToIPFS', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${pinataJwt}`,
+        },
+        body: pinataFormData,
+      });
+
+      if (!pinataRes.ok) {
+        const errText = await pinataRes.text();
+        res.status(pinataRes.status).json({ error: `Pinata IPFS upload failed: ${errText}` });
+        return;
+      }
+
+      const pinataData = await pinataRes.json();
+      res.json({
+        success: true,
+        cid: pinataData.IpfsHash,
+      });
+    } catch (err: any) {
+      res.status(500).json({ error: err.message || 'Server upload error' });
     }
   });
 

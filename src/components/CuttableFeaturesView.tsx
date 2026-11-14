@@ -196,44 +196,40 @@ export function CuttableFeaturesView({ lang }: CuttableFeaturesViewProps) {
         <div className="flex flex-wrap items-center bg-slate-100 dark:bg-slate-800 p-1 rounded-xl border border-slate-200 dark:border-slate-700 text-xs">
           <button
             onClick={() => setActiveSubTab('voice')}
-            className={`px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center space-x-1.5 ${
-              activeSubTab === 'voice'
-                ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs'
-                : 'text-slate-600 dark:text-slate-400'
-            }`}
+            className={`px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center space-x-1.5 ${activeSubTab === 'voice'
+              ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs'
+              : 'text-slate-600 dark:text-slate-400'
+              }`}
           >
             <Volume2 className="w-3.5 h-3.5 text-emerald-600" />
             <span>{lang === 'am' ? 'ድምፅ (Voice)' : 'Voice Replies'}</span>
           </button>
           <button
             onClick={() => setActiveSubTab('registry')}
-            className={`px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center space-x-1.5 ${
-              activeSubTab === 'registry'
-                ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs'
-                : 'text-slate-600 dark:text-slate-400'
-            }`}
+            className={`px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center space-x-1.5 ${activeSubTab === 'registry'
+              ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs'
+              : 'text-slate-600 dark:text-slate-400'
+              }`}
           >
             <Building2 className="w-3.5 h-3.5 text-sky-600" />
             <span>{lang === 'am' ? 'ብሔራዊ መዝገብ' : 'National Registry'}</span>
           </button>
           <button
             onClick={() => setActiveSubTab('sms')}
-            className={`px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center space-x-1.5 ${
-              activeSubTab === 'sms'
-                ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs'
-                : 'text-slate-600 dark:text-slate-400'
-            }`}
+            className={`px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center space-x-1.5 ${activeSubTab === 'sms'
+              ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs'
+              : 'text-slate-600 dark:text-slate-400'
+              }`}
           >
             <Smartphone className="w-3.5 h-3.5 text-amber-500" />
             <span>{lang === 'am' ? 'SMS መመሪያ' : 'SMS Gateway'}</span>
           </button>
           <button
             onClick={() => setActiveSubTab('pulse')}
-            className={`px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center space-x-1.5 ${
-              activeSubTab === 'pulse'
-                ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs'
-                : 'text-slate-600 dark:text-slate-400'
-            }`}
+            className={`px-3 py-1.5 rounded-lg font-semibold transition-all flex items-center space-x-1.5 ${activeSubTab === 'pulse'
+              ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs'
+              : 'text-slate-600 dark:text-slate-400'
+              }`}
           >
             <Radio className="w-3.5 h-3.5 text-rose-500" />
             <span>{lang === 'am' ? 'የደህንነት ድምር' : 'Safety Pulse'}</span>
@@ -273,11 +269,10 @@ export function CuttableFeaturesView({ lang }: CuttableFeaturesViewProps) {
                 <button
                   key={s.id}
                   onClick={() => setSelectedVoiceStatus(s.id)}
-                  className={`p-3 text-xs font-bold rounded-xl border text-left transition-all ${
-                    selectedVoiceStatus === s.id
-                      ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-500 text-emerald-900 dark:text-emerald-200 ring-2 ring-emerald-500/30'
-                      : 'bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 hover:bg-slate-100 text-slate-700 dark:text-slate-300'
-                  }`}
+                  className={`p-3 text-xs font-bold rounded-xl border text-left transition-all ${selectedVoiceStatus === s.id
+                    ? 'bg-emerald-50 dark:bg-emerald-950/40 border-emerald-500 text-emerald-900 dark:text-emerald-200 ring-2 ring-emerald-500/30'
+                    : 'bg-slate-50 dark:bg-slate-800/60 border-slate-200 dark:border-slate-700 hover:bg-slate-100 text-slate-700 dark:text-slate-300'
+                    }`}
                 >
                   {s.label}
                 </button>
@@ -310,8 +305,8 @@ export function CuttableFeaturesView({ lang }: CuttableFeaturesViewProps) {
                         ? 'እያዳመጡ ነው...'
                         : 'Playing Audio...'
                       : lang === 'am'
-                      ? 'ድምፁን አጫውት'
-                      : 'Play Voice Audio'}
+                        ? 'ድምፁን አጫውት'
+                        : 'Play Voice Audio'}
                   </span>
                 </button>
               </div>
@@ -361,11 +356,10 @@ export function CuttableFeaturesView({ lang }: CuttableFeaturesViewProps) {
             {/* Outage Toggle (FR-IO-04 Non-blocking proof) */}
             <button
               onClick={handleToggleRegistryOutage}
-              className={`px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center space-x-2 border transition-all ${
-                isRegistryOffline
-                  ? 'bg-rose-100 text-rose-900 border-rose-300 dark:bg-rose-950 dark:text-rose-200'
-                  : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-300 dark:bg-slate-800 dark:text-slate-200'
-              }`}
+              className={`px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center space-x-2 border transition-all ${isRegistryOffline
+                ? 'bg-rose-100 text-rose-900 border-rose-300 dark:bg-rose-950 dark:text-rose-200'
+                : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-300 dark:bg-slate-800 dark:text-slate-200'
+                }`}
             >
               <Power className={`w-3.5 h-3.5 ${isRegistryOffline ? 'text-rose-600' : 'text-emerald-500'}`} />
               <span>
@@ -431,13 +425,12 @@ export function CuttableFeaturesView({ lang }: CuttableFeaturesViewProps) {
 
           {/* Query Result Badge (FR-IO-03) */}
           {registryTestResult && (
-            <div className={`p-4 rounded-xl border text-xs space-y-2 ${
-              registryTestResult.registered
-                ? 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-300 dark:border-emerald-800'
-                : registryTestResult.registryStatus === 'Unavailable'
+            <div className={`p-4 rounded-xl border text-xs space-y-2 ${registryTestResult.registered
+              ? 'bg-emerald-50 dark:bg-emerald-950/30 border-emerald-300 dark:border-emerald-800'
+              : registryTestResult.registryStatus === 'Unavailable'
                 ? 'bg-amber-50 dark:bg-amber-950/30 border-amber-300 dark:border-amber-800'
                 : 'bg-rose-50 dark:bg-rose-950/30 border-rose-300 dark:border-rose-800'
-            }`}>
+              }`}>
               <div className="flex items-center justify-between">
                 <span className="font-bold flex items-center space-x-1.5">
                   {registryTestResult.registered ? (
